@@ -23,29 +23,53 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bomb" translatesAutoresizingMaskIntoConstraints="NO" id="me7-Ab-2gr">
                                 <rect key="frame" x="29" y="178" width="149" height="132"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCi-2z-P6u">
-                                <rect key="frame" x="60" y="336" width="86" height="30"/>
-                                <state key="normal" title="Hide Matilda"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vro-x4-b2t">
-                                <rect key="frame" x="233" y="336" width="76" height="30"/>
-                                <state key="normal" title="Hide Bomb"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfT-JK-8sz">
-                                <rect key="frame" x="170" y="397" width="35" height="30"/>
-                                <state key="normal" title="Meet"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zq-2t-VDW">
-                                <rect key="frame" x="168" y="488" width="39" height="30"/>
-                                <state key="normal" title="Reset"/>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="matilda" translatesAutoresizingMaskIntoConstraints="NO" id="qVg-Ld-6Vh">
                                 <rect key="frame" x="191" y="178" width="164" height="150"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCi-2z-P6u">
+                                <rect key="frame" x="66" y="335" width="76" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Hide Bomb"/>
+                                <connections>
+                                    <action selector="hideBombButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ie8-9B-STF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vro-x4-b2t">
+                                <rect key="frame" x="228" y="336" width="87" height="30"/>
+                                <state key="normal" title="Hide Matilde"/>
+                                <connections>
+                                    <action selector="hideMathildaButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yBe-pa-5GD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naV-bW-bwn">
+                                <rect key="frame" x="155" y="381" width="68" height="30"/>
+                                <state key="normal" title="Hide Both">
+                                    <color key="titleColor" red="1" green="0.33905609489999999" blue="0.20795803560000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideBothButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fPC-zD-Tls"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zq-2t-VDW">
+                                <rect key="frame" x="170" y="487" width="39" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.24489768376516885" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FUf-ir-B27"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="hideBombButton" destination="sCi-2z-P6u" id="6pN-7D-lv0"/>
+                        <outlet property="hideMathildaButton" destination="Vro-x4-b2t" id="iYg-dN-ewp"/>
+                        <outlet property="leftBombLabel" destination="me7-Ab-2gr" id="Wjb-5J-FIQ"/>
+                        <outlet property="resetButton" destination="9zq-2t-VDW" id="g1U-TN-hbK"/>
+                        <outlet property="rightMathildaLabel" destination="qVg-Ld-6Vh" id="YUK-Fa-4iv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
